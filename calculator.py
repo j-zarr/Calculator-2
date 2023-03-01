@@ -4,9 +4,9 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
                         power, mod, )
 
 
-active = True
 
-while active:
+
+while True:
     equation = input("Type an equation to calculate: ")
 
     elements_in_equation = equation.split(' ')
@@ -42,8 +42,7 @@ while active:
        calc = mod(int_elements[0], int_elements[1])
 
     elif calc_type == "q":
-        active = False
-        quit()
+        break
 
     else:
         input("Invalid command\n")
